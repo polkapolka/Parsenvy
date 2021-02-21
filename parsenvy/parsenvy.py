@@ -155,6 +155,17 @@ def str(
     env_var: builtins.str,
     default: Optional[builtins.str] = None,
 ) -> Optional[builtins.str]:
+    """
+    Parse environment variable value into a string.
+
+    Args:
+        env_var (str): Name of desired environment variable.
+        default (string, optional): Optional fallback value.
+
+    Returns:
+        string (optional): Environment variable typecast into a string.
+
+    """
     if env_var == "":
         return default
 
